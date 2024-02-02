@@ -7,7 +7,7 @@ export class LocalService {
   constructor() { }
 
   setData<T>(key:string, value:T) : void {
-    if(!localStorage) {
+    if(localStorage===undefined) {
       return;
     }
     localStorage.setItem(key, JSON.stringify({
@@ -16,7 +16,7 @@ export class LocalService {
   }
 
   getData<T>(key:string) : T | null {
-    if(!localStorage) {
+    if(localStorage===undefined) {
       return null;
     }
     const _t = localStorage.getItem(key);
@@ -26,14 +26,14 @@ export class LocalService {
   }
 
   removeData(key:string) : void {
-    if(!localStorage) {
+    if(localStorage===undefined) {
       return;
     }
     localStorage.removeItem(key);
   }
 
   reset() : void {
-    if(!localStorage) {
+    if(localStorage===undefined) {
       return;
     }
     localStorage.clear();
