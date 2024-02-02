@@ -1,0 +1,23 @@
+<div class="container flex flex-col gap-7">
+    <div class="header flex flex-col justify-center items-start gap-3 relative">
+        <h1 class="text-5xl font-bold">Welcome to Quizzo</h1>
+        <h3 class="text-3xl">
+            <i>Let's play it!!!</i>
+        </h3>
+        <div class="info absolute top-0 end-0 p-5 cursor-pointer">
+            <fa-icon [icon]="faInfo" class="text-sky-500 peer"></fa-icon>
+            <div class="w-0 h-0 peer-hover:w-[100px] peer-hover:h-[100px] absolute top-12 end-5 peer-hover:border-2 border-sky-500 ease-in-out duration-300 rounded-md"></div>
+        </div>
+    </div>
+    <div class="rules flex flex-col gap-2">
+        <div class="label text-red-700 font-bold text-2xl">Rules</div>
+        <ul class="flex flex-col gap-1 list-disc ps-5">
+            <li>Correct Answer : +10</li>
+            <li>Incorrect Answer : -5</li>
+            <li>Unattempted Question : 0</li>
+            <li>Total Questions : 10</li>
+            <li>Total Time : 10:00 mins</li>
+        </ul>
+    </div>
+    <button type="submit" class="w-fit rounded-full bg-sky-500 text-white px-7 py-2 mx-auto border-2 border-sky-500 hover:bg-transparent hover:text-sky-500 hover:scale-125 ease-in-out duration-300" (click)="startQuiz()">Let's go!!!</button>
+</div>
